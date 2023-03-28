@@ -5,6 +5,7 @@ import Text from './components/Text';
 import Page from './components/Page';
 import PageSplit from './components/PageSplit';
 import Wrapper from './components/Wrapper';
+import './styles/index.css'
 
 const App = () => {
     const [sum, setSum] = useState<number | undefined>(undefined);

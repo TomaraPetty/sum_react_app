@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/index.css';
 
 interface PageSplitProps {
   children: React.ReactNode;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/index.css';
 
 interface FileInputProps {
   setSum: React.Dispatch<React.SetStateAction<number | undefined>>;
