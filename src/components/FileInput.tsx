@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../ui/index.css';
+import '../styles/index.css';
 
-interface FileInputProps {}
+interface FileInputProps {
+  setSum: React.Dispatch<React.SetStateAction<number | undefined>>;
+}
 
-const FileInput: React.FC<FileInputProps> = (props: FileInputProps) => {
+const FileInput: React.FC<FileInputProps> = ({ setSum }: FileInputProps) => {
   const [file, setFile] = useState<File | undefined>(undefined);
-  const [sum, setSum] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     calculateSum();
@@ -41,33 +42,12 @@ const FileInput: React.FC<FileInputProps> = (props: FileInputProps) => {
   };
 
   return (
-    <div className='page'>
-      <div className='split left'>
-        <div className='wrapper'>
-          <h1 className='h1 header'>Sum The Values</h1>
-          <p className='p1'>
-            Select a CSV file to upload. We'll calculate the sum of all the
-            values in your csv.
-          </p>
-          <label htmlFor='file-upload' className='upload-button'>
-            Upload CSV
-          </label>
-          <input id='file-upload' type='file' onChange={handleFileChange} />
-        </div>
-      </div>
-      <div className='split right'>
-        <div className='wrapper'>
-          {sum !== undefined && (
-            <>
-              <p className='p1'>
-                Total of all values in your csv file:
-              </p>
-              <h1 className='h1 sum-container'>{sum}</h1>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
+    <>
+      <label htmlFor='file-upload' className='upload-button'>
+        Upload CSV
+      </label>
+      <input id='file-upload' type='file' onChange={handleFileChange} />
+    </>
   );
 };
 
