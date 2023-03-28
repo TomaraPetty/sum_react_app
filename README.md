@@ -1,7 +1,7 @@
 # sum_react_app
 ![GitHub](https://img.shields.io/badge/license-MIT-green)
 
-Link to site: https://tomarapetty.github.io/react-portfolio/
+Link to site: https://tomarapetty.github.io/sum_react_app/
 
 ## Table of Contents
 * [Description](#description)
