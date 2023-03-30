@@ -38,7 +38,7 @@ npm run start
 1. Click upload:
     1. Click the button to see download options from your computer.  
 2. Choose the sample csv file:
-    1. The application will calculate the sum of the values in all of the cells.
+    1. The application will calculate the sum of the values in all of the cells, exculding the header and the first column which is a date column.
 2. Total sum:
     1. Total sum will show on the right side of the screen when the sum has been calculated. 
 
